@@ -64,7 +64,7 @@ else:
     textstr3 = "Element: Ba-133 \n Peak: 302 keV"
     textstr4 = "Element: Ba-133 \n Peak: 356 keV"
     textstr5 = "Element: Ba-133 \n Peak: 382 keV"
-    textstr6 = "Element: Co-60 \n Peak: 1170 keV"
+    textstr6 = "Element: Co-60 \n Peak: 1173.2 keV"
     textstr7 = "Element: Na-22 \n Peak: 511 keV"
 
     ax1.annotate(textstr1, xy=(75, 27), xytext=(75, 200),arrowprops=dict(arrowstyle="->"))
