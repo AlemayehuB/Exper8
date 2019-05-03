@@ -25,7 +25,7 @@ textstr1 = "Peak: 661.6 keV\n"
 
 file1 = open("cs.txt","a")
 for i in range(len(ch)):
-    x = str(ch[i]) +  " " + str(energy[i]) + " " + str(counts[i]) + "\n"
+    x = str(ch[i]) +  " " + str(energy[i]) + " "+ str(denergy[i])+ " " + str(counts[i]) + "\n"
     file1.write(x)
 
 ax1.annotate(textstr1, xy=(640, 8500), xytext=(400, 7000),arrowprops=dict(arrowstyle="->"))

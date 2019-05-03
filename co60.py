@@ -25,10 +25,10 @@ textstr4 = "Compton Edge \n Peak: 1173.2 keV"
 textstr5 = "Peak: 1173.2 keV"
 textstr6 = "Compton Edge \n Peak: 1332.5 keV"
 textstr7 = "Peak: 1332.5 keV\n"
-# file1 = open("co.txt","a")
-# for i in range(len(ch)):
-#     x = str(ch[i]) +  " " + str(energy[i]) + " " + str(counts[i]) + "\n"
-#     file1.write(x)
+file1 = open("co.txt","a")
+for i in range(len(ch)):
+    x = str(ch[i]) +  " " + str(energy[i]) + " " + str(denergy[i]) + " " + str(counts[i]) + "\n"
+    file1.write(x)
 # ax1.annotate(textstr1, xy=(75, 27), xytext=(75, 200),arrowprops=dict(arrowstyle="->"))
 # ax1.annotate(textstr3, xy=(302, 103), xytext=(302, 25),arrowprops=dict(arrowstyle="->"))
 # ax1.annotate(textstr4, xy=(356, 123), xytext=(500, 100),arrowprops=dict(arrowstyle="->"))

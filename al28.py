@@ -32,7 +32,7 @@ ax1.annotate(textstr1, xy=(640, 8500), xytext=(400, 7000),arrowprops=dict(arrows
 ax1.annotate(textstr2, xy=(443, 815), xytext=(300, 1500),arrowprops=dict(arrowstyle="->"))
 ax1.legend(loc='upper right')
 #
-# ax1.set_ylim(0,1000)
+ax1.set_ylim(0,300)
 ax1.set_xlim(energy.min(),energy.max())
 
 plt.savefig('al28.png')

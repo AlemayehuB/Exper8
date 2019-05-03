@@ -26,10 +26,10 @@ textstr4 = "Peak: 1769.7 keV"
 textstr5 = "Compton Edge \n Peak: 569.6 keV"
 textstr6 = "Compton Edge \n Peak: 1060 keV"
 
-# file1 = open("bi.txt","a")
-# for i in range(len(ch)):
-#     x = str(ch[i]) +  " " + str(energy[i]) + " " + str(counts[i]) + "\n"
-#     file1.write(x)
+file1 = open("bi.txt","a")
+for i in range(len(ch)):
+    x = str(ch[i]) +  " " + str(energy[i]) + " " + str(counts[i]) + "   " + str(denergy[i]) +"\n"  
+    file1.write(x)
 
 ax1.annotate(textstr1, xy=(66, 9366), xytext=(100, 8666),arrowprops=dict(arrowstyle="->"))
 ax1.annotate(textstr2, xy=(550, 3088), xytext=(302, 5000),arrowprops=dict(arrowstyle="->"))

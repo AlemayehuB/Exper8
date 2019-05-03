@@ -23,10 +23,10 @@ textstr3 = "Peak: 382 keV\n"
 textstr2 = "Peak: 356 keV\n"
 textstr1 = "Peak: 302 keV\n"
 textstr4 = "Peak: 81 keV\n"
-# file1 = open("ba.txt","a")
-# for i in range(len(ch)):
-#     x = str(ch[i]) +  " " + str(energy[i]) + " " + str(counts[i]) + "\n"
-#     file1.write(x)
+file1 = open("ba.txt","a")
+for i in range(len(ch)):
+    x = str(ch[i]) +  " " + str(energy[i]) + " " + str(denergy[i]) + " " + str(counts[i]) + "\n"
+    file1.write(x)
 
 ax1.annotate(textstr1, xy=(281, 12372.0), xytext=(100, 15000),arrowprops=dict(arrowstyle="->"))
 ax1.annotate(textstr2, xy=(336, 23312.0), xytext=(200, 20000),arrowprops=dict(arrowstyle="->"))
