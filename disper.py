@@ -53,7 +53,7 @@ else:
     ax1.plot(T, fitfunc(pf1, T), 'r-', label = 'Fit')
 
     ax1.set_title('Mass of the Electron from Non-Relativistic Dispersion Relation')
-    ax1.set_xlabel('Energy, $keV$')
+    ax1.set_xlabel('T, $keV$')
     ax1.set_ylabel('$m_{nr} = p^{2}/2T, keV/c^{2}$')
     ax1.legend()
 
