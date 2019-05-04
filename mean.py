@@ -14,17 +14,17 @@ E = np.sort(E)
 T = np.sort(T)
 dE = np.sort(dE)
 dT = np.sort(dT)
-m = np.power(((2 * E) - T),2)/(2 *T) #keV/c^2
-num = 2 * (np.sqrt(np.power(2*dE, 2) + np.power(dT,2))/((2 * dE)  - dT)) * np.power(((2 * dE) - dT),2)
-den = (2 * dT)
-dm = m * np.sqrt(np.power(num/np.power(((2 * E) - T),2),2) + np.power(den/(2*T),2))
+mc = ((2*E) * (E -T))/T  #keV/c^2
+dmc = mc * np.sqrt(np.sqrt(np.power((2*dE)/(2*E),2) + np.power(np.sqrt(np.power(dE, 2) + np.power(dT,2))/(E -T),2)) + np.power(dT/T,2))
 print(m)
+
+
 ##############################################################################
 # Fit
 ##############################################################################
 p01 = [10,6]
 pf1, cov1, info1, mesg1, success1 = optimize.leastsq(residual, p01,
-                                     args = (E, m, dm), full_output=1)
+                                     args = (E, mc, dmc), full_output=1)
 
 if cov1 is None:
     print('Fit did not converge')
@@ -48,7 +48,7 @@ else:
 
     fig1 = plt.figure()
     ax1 = fig1.add_subplot(111)
-    ax1.errorbar(E, m, yerr = dm, xerr = dE, fmt='k.', label = 'Data')
+    ax1.errorbar(E, mc, yerr = dmc, xerr = dE, fmt='k.', label = 'Data')
     T = np.linspace(E.min(), E.max(), 500)
     ax1.plot(T, fitfunc(pf1, T), 'r-', label = 'Fit')
 
